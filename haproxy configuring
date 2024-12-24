@@ -32,6 +32,11 @@ listen api
 EOF
 
 ###
+sudo firewall-cmd --add-port=80/tcp --permanent
+sudo firewall-cmd --add-port=6443/tcp --permanent
+sudo firewall-cmd --add-port=443/tcp --permanent
+sudo systemctl restart firewalld
+sudo semanage port -a -t http_port_t -p tcp 6443
 sudo systemctl restart haproxy
 
 #Ref:https://akos.ma/blog/openshift-local-crc-from-another-machine/
