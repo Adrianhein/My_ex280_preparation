@@ -1,0 +1,38 @@
+
+sudo dnf install -y haproxy
+sudo systemctl enable haproxy && sudo systemctl start haproxy
+sudo cp -p /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg_origin
+
+export CRC_IP=$(crc ip)
+
+sudo tee /etc/haproxy/haproxy.cfg &>/dev/null <EOF
+global
+    log /dev/log local0
+
+defaults
+    balance roundrobin
+    log global
+    maxconn 100
+    mode tcp
+    timeout connect 5s
+    timeout client 500s
+    timeout server 500s
+
+listen app
+    bind 0.0.0.0:80
+    server crcvm $CRC_IP:80 check
+
+listen apps_ssl
+    bind 0.0.0.0:443
+    server crcvm $CRC_IP:443 check
+
+listen api
+    bind 0.0.0.0:6443
+    server crcvm $CRC_IP:6443 check
+EOF
+
+###
+sudo systemctl restart haproxy
+
+#Ref:https://akos.ma/blog/openshift-local-crc-from-another-machine/
+#https://gist.github.com/tmckayus/8e843f90c44ac841d0673434c7de0c6a
