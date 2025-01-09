@@ -39,5 +39,14 @@ sudo systemctl restart firewalld
 sudo semanage port -a -t http_port_t -p tcp 6443
 sudo systemctl restart haproxy
 
+
+
+
+# If there is no update in the /etc/hosts entries, please add this: 
+# Added by CRC
+$(crc ip) api.crc.testing canary-openshift-ingress-canary.apps-crc.testing console-openshift-console.apps-crc.testing default-route-openshift-image-registry.apps-crc.testing downloads-openshift-console.apps-crc.testing host.crc.testing oauth-openshift.apps-crc.testing
+# End of CRC section
+
+
 #Ref:https://akos.ma/blog/openshift-local-crc-from-another-machine/
 #https://gist.github.com/tmckayus/8e843f90c44ac841d0673434c7de0c6a
