@@ -10,7 +10,8 @@
 # https://github.com/Adrianhein/My_ex280_preparation/blob/main/If%20oc%20command%20not%20found
 
 # => Configure HAProxy 
-# https://github.com/Adrianhein/My_ex280_preparation/blob/main/haproxy%20configuring
+# 
+https://github.com/Adrianhein/My_ex280_preparation/blob/main/haproxy%20configuring
 
 
 
