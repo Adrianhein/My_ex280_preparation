@@ -1,9 +1,9 @@
 # My_ex280_preparation
 
 => OpenShift_Local_LabEnvironment
-#
+
 https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift_Local_LabEnv.pdf
-#
+
 #
 => OpenShift Local installation on CentOS Stream 9
 #
