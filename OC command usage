@@ -55,6 +55,10 @@ oc describe project my-project-name
 oc delete project my-project-name
 
 
+oc get deployments
+oc get deployments -n openshift-apiserver
+oc get apiserver
+
 
 
 
