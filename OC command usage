@@ -83,6 +83,11 @@ oc logs -f bc/<bc-name>
 oc logs -f bc/<bc-name> --version=<version-name>
 oc logs -f deployment/<deployment-name>
 oc logs -f deployment/<deployment-name> --version=<version-name>
+oc logs -f pod/<pod-name>
+
+oc adm node-logs <NODE-NAME>
+oc adm node-logs <NODE-NAME> --role master
+oc adm node-logs <NODE-NAME> --role master -u kublet
 
 
 
