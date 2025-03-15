@@ -32,5 +32,8 @@
 
 #oc get pods --field-selector=status.phase=Running
 
+#Importing => oc apply -f my-app.yaml
+
+#Exporting => oc get deployment my-app -o yaml > exported-my-app.yaml
 
 
