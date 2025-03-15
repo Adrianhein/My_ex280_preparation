@@ -1,6 +1,5 @@
 
 
-
 #oc help
 
 #oc adm --help
@@ -30,6 +29,8 @@
 #oc describe pods my-app-name
 
 #oc get pods my-app-name -o yaml
+
+#oc get pods --field-selector=status.phase=Running
 
 
 
