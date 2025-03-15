@@ -90,4 +90,15 @@ oc adm node-logs <NODE-NAME> --role master
 oc adm node-logs <NODE-NAME> --role master -u kublet
 
 
+# Health check inside OpenShift cluster
+oc get pods -n openshift-etcd
+oc -n openshift-etcd rsh etcd-crc
+
+oc get clusteroperators
+
+
+
+
+
+
 
