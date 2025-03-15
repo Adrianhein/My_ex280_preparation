@@ -75,7 +75,14 @@ oc adm top pods --namespaces=my-namespace
 oc adm top pods -l app=my-app-name
 
 
+#Logs
+oc logs -h
 
+# bc=> build config
+oc logs -f bc/<bc-name>
+oc logs -f bc/<bc-name> --version=<version-name>
+oc logs -f deployment/<deployment-name>
+oc logs -f deployment/<deployment-name> --version=<version-name>
 
 
 
