@@ -1,0 +1,35 @@
+
+
+
+#oc help
+
+#oc adm --help
+
+#oc get routes -n openshift-console
+
+#oc status -n openshift-console
+
+#oc whoami
+
+#oc whoami --show-console
+
+#oc new-project my-test-project
+
+#oc new-app --name=my-app --image=openshift/hello-openshift
+
+#oc status
+
+#oc logs
+
+#oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels
+
+#oc get pods -l deployment=app-name
+
+#oc describe pods my-app-name | grep IP
+
+#oc describe pods my-app-name
+
+#oc get pods my-app-name -o yaml
+
+
+
