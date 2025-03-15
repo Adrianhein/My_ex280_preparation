@@ -20,6 +20,8 @@
 
 #oc logs
 
+#oc get all
+
 #oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels
 
 #oc get pods -l deployment=app-name
@@ -35,5 +37,26 @@
 #Importing => oc apply -f my-app.yaml
 
 #Exporting => oc get deployment my-app -o yaml > exported-my-app.yaml
+
+
+#Container image stream = >
+oc get imagestream -n openshift
+oc describe imagestream <IMAGE_NAME> -n openshift
+oc get image sha256:b80a514f136f738736d
+oc describe image sha256:b80a514f136f738736d
+
+
+#Create project and app
+oc new-project my-project-name --description='My New Project' --display-name='My Test'
+oc new-app --name=my-app --image=openshift/hello-openshift
+oc describe project my-project-name
+
+#Delete project
+oc delete project my-project-name
+
+
+
+
+
 
 
