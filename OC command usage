@@ -59,6 +59,21 @@ oc get deployments
 oc get deployments -n openshift-apiserver
 oc get apiserver
 
+oc get pods --all-namespaces
+
+## To list all the nodes in the clutser
+oc get nodes
+oc get componentstatus
+
+
+#OC ADM command
+oc adm
+oc adm top nodes 
+oc adm top nodes --sort-by=cpu
+oc adm top pods 
+oc adm top pods --namespaces=my-namespace
+oc adm top pods -l app=my-app-name
+
 
 
 
