@@ -8,6 +8,10 @@
 
 
    => Create and delete users
+      # Types of users in OpenShift- [ Regular / System / Services ]
+
+
+
    => Modify user passwords
    =>  Create and manage groups
    =>  Modify user and group permissions
