@@ -46,10 +46,12 @@
 
       #oc describe rolebinding.rbac -n my-project         <<<<< to check role binding at specific project
 
+      #oc adm policy add-role-to-user <role> <user-name> -n <project>   <<<< assigning role to user
+      #oc adm policy remove-role-from-user <role> <user-name> -n <project>   <<<< removing role from user
 
-
-
-
+      #oc adm policy add-role-to-group <role> <group-name> -n <project>                  <<<< assigning role to group
+      #oc adm policy remove-role-from-group <role> <group-name> -n <project>             <<<< removing role from group
+      #oc adm policy who-can <verb> <resource>             <<<<< Listing user and grup with permission
 
 
 https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
