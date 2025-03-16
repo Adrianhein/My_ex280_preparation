@@ -14,6 +14,11 @@
 
    => Modify user passwords
    =>  Create and manage groups
+      #oc adm groups new <grop-name>
+      #oc adm groups new <group-name> <users1 users2 users3>
+      #oc adm add-users <group-name> <users4 users5>                <<<< adding users to existing group
+
+
    =>  Modify user and group permissions
 
 
