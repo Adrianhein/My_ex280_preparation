@@ -1,1 +1,20 @@
 
+#Manage Authentication and Authorization
+
+   => Configure the HTPasswd identity provider for authentication
+   => Create and delete users
+   => Modify user passwords
+   =>  Create and manage groups
+   =>  Modify user and group permissions
+
+
+
+
+
+
+
+
+
+
+
+https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
