@@ -18,6 +18,9 @@
       #oc adm groups new <group-name> <users1 users2 users3>
       #oc adm add-users <group-name> <users4 users5>                <<<< adding users to existing group
 
+      #oc adm policy add-role-to-group view <group-name> -n my-project   <<<< assigning group roles
+
+
 
    =>  Modify user and group permissions
 
