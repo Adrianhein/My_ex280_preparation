@@ -30,6 +30,16 @@
       # Roles defined by these words :=> [ get list view watch delete update patch create ]
       # Role binding, that is connecting roles to the users or gruops
 
+      # Default roles :
+        'admin' << Project admin access
+        'basic-user' << R-O view basic info access
+        'cluster-admin' << Full Superuser access
+        'cluster-status' << R-O to view the cluster status access
+        'cluster-reader' << R-O across cluster access
+        'edit'  << can modify objects in project access
+        'self-provisioner'  << can create own project access
+
+
       #oc describe clusterrolebinding.rbac             <<<<< to check role binding at cluster wide
 
       #oc describe rolebinding.rbac         <<<<< to check role binding at project level
