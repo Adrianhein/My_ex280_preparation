@@ -1,5 +1,5 @@
 
-#Manage Authentication and Authorization
+#Manage Authentication and Authorization: " sudo dnf install httpd-tools -y " if htpasswd was not installed yet.
 
    => Configure the HTPasswd identity provider for authentication
    => Create and delete users
