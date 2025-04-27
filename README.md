@@ -59,19 +59,16 @@ Create 1 VM for Git Server (can use Centos/Fedora/RHEL)
         8 GB RAM
         1000 GB HD
 
-
-
-
 Possible Infra minimum setup requirement for fresh OpenShift Cluster
 
         -------------------------------------------------
         |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
-        |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
-        |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 02| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 03| 4 vCPUs | 16 GB RAM | 120 GB HD|
         -------------------------------------------------
         |Worker Node 01| 2 vCPUs | 8 GB RAM | 120 GB HD |
-        |Worker Node 01| 2 vCPUs | 8 GB RAM | 120 GB HD |
-        |Worker Node 01| 2 vCPUs | 8 GB RAM | 120 GB HD |
+        |Worker Node 02| 2 vCPUs | 8 GB RAM | 120 GB HD |
+        |Worker Node 03| 2 vCPUs | 8 GB RAM | 120 GB HD |
         -------------------------------------------------
         |Boostrap Node | 2 vCPUs | 16 GB RAM | 120 GB HD|
         -------------------------------------------------
