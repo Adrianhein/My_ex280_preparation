@@ -1,0 +1,29 @@
+
+" self-provisioner " vs " self-provisioners " can be confusing, but here's the clear difference:
+
+| ------------------- | ----------- | ------------------------------------------------ |
+| Term                | Type        | Purpose                                          |
+| ------------------- | ----------- | ------------------------------------------------ |
+| `self-provisioner`  | ClusterRole | Grants project creation permissions              |
+| `self-provisioners` | Group       | Default group of users allowed to self-provision |
+| ------------------- | ----------- | ------------------------------------------------ |
+#
+
+
+
+self-provisioner (Cluster Role)
+#You assign this role to a user or group to enable project creation.
+
+oc adm policy add-cluster-role-to-user self-provisioner leader
+
+
+
+
+#self-provisioners (Group Name)
+#You can remove users from this group to prevent them from creating projects.
+
+oc adm policy remove-cluster-role-from-group self-provisioner self-provisioners
+
+
+###################
+
