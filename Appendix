@@ -25,5 +25,33 @@ oc adm policy add-cluster-role-to-user self-provisioner leader
 oc adm policy remove-cluster-role-from-group self-provisioner self-provisioners
 
 
-###################
+########################################################################################################################################################
+
+" deployment (Singular) " vs " deployments (Plural) "
+
+In OpenShift (and Kubernetes), the terms deployment and deployments refer to the same resource type, but are used differently depending on context:
+
+Example:
+
+#It typically refers to one resource.
+oc get deployment my-app
+
+#It’s the pluralized form used by the OpenShift/Kubernetes API.
+oc describe deployments
+
+
+
+| --------------|--------------------- | -----------------------------------------|
+| Term          | Context              | Purpose                                  |
+| ------------- | -------------------- | ---------------------------------------- |
+| `deployment`  | YAML or CLI (single) | Refers to a specific Deployment resource |
+| `deployments` | Listing or querying  | Refers to all Deployment resources       |
+| --------------| -------------------- | -----------------------------------------|
+
+
+########################################################################################################################################################
+
+
+
+
 
