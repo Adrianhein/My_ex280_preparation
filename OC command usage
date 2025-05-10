@@ -10,13 +10,10 @@
     | oc get routes -n openshift-console                                                             |
     --------------------------------------------------------------------------------------------------
 
-
 =>Opsnshift administrator want to check for Administrative Commands Actions for administering an OpenShift cluster
     --------------------------------------------------------------------------------------------------
     | oc adm --help                                                                                  |
     --------------------------------------------------------------------------------------------------
-
-#oc get routes -n openshift-console
 
 =>Opsnshift administrator to check the status of the namespace
     --------------------------------------------------------------------------------------------------
