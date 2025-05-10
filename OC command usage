@@ -162,3 +162,22 @@ oc -n openshift-etcd rsh etcd-crc
 
 oc get clusteroperators
 
+
+
+
+
+
+
+
+# Create 2 VMs for the LoadBalancer (can use Centos/Fedora/RHEL)
+    LoadBalancer VM
+        2 vCPUs
+        4 GB RAM
+    30 GB HD
+
+Create 1 VM for DNS (can use Centos/Fedora/RHEL)
+
+
+
+
+
