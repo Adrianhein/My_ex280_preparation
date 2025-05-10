@@ -99,19 +99,25 @@ oc adm node-logs <NODE-NAME> --role master -u kublet
     | oc logs -f pod/<pod name> -n <project name>                                                    |
     --------------------------------------------------------------------------------------------------
 
-=>Opsnshift administrator want to  print the supported API resources on the server.
+=>Opsnshift administrator want to print the supported API resources on the server.
     --------------------------------------------------------------------------------------------------
     | oc api-resources                                                                               |
     --------------------------------------------------------------------------------------------------
 
+
+=>Opsnshift administrator want to do "Querying, Filtering"
 #oc get all
+#oc get deployment -n <project name> -o wide
+#oc get deployment -n <project name> -o yam
+#oc describe deployment -n <project name>
+#oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
 
-#oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels
+#oc describe pods -n <project name>
 
-#oc get pods -l deployment=app-name
+#oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
+#oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
 
-#Querying | Filtering 
-
+#oc get pods -l deployment=<app name>
 #oc describe pods my-app-name | grep IP
 
 #oc describe pods my-app-name
