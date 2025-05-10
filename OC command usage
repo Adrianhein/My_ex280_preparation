@@ -30,13 +30,14 @@
 #oc logs --help
 
 =>Opsnshift administrator want to check for logs under "deployment"
-#oc logs deployment/<app name Or deployment name>
-#oc logs -f deployment/<app name Or deployment name>
+#oc get deployments -n <project name>
+#oc logs deployment/<app name Or deployment name> -n <project name>
+#oc logs -f deployment/<app name Or deployment name> -n <project name>
 
 =>Opsnshift administrator want to check for logs under "pod"
 #oc get pod -n <project name>
-#oc logs pod/<pod name>
-#oc logs -f pod/<pod name>
+#oc logs pod/<pod name> -n <project name>
+#oc logs -f pod/<pod name> -n <project name>
 
 
 
