@@ -1,17 +1,39 @@
 
 
-#oc help
+=>Opsnshift administrator want to check for "oc" client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+    --------------------------------------------------------------------------------------------------
+    | oc help                                                                                        |
+    --------------------------------------------------------------------------------------------------
 
-#oc adm --help
+=>Opsnshift administrator want to identify for WEB console URL
+    --------------------------------------------------------------------------------------------------
+    | oc get routes -n openshift-console                                                             |
+    --------------------------------------------------------------------------------------------------
+
+
+=>Opsnshift administrator want to check for Administrative Commands Actions for administering an OpenShift cluster
+    --------------------------------------------------------------------------------------------------
+    | oc adm --help                                                                                  |
+    --------------------------------------------------------------------------------------------------
 
 #oc get routes -n openshift-console
 
 =>Opsnshift administrator to check the status of the namespace
-#oc status -n <name of project>
-#oc status -n openshift-console
+    --------------------------------------------------------------------------------------------------
+    | oc status -h                                                                                   |
+    --------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------
+    | oc status -n <name of project>                                                                 |
+    --------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------
+    | oc status -n openshift-console                                                                 |
+    --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for all status of the namespaces
-#oc status -A
+    --------------------------------------------------------------------------------------------------
+    | oc status -A                                                                                   |
+    --------------------------------------------------------------------------------------------------
+
 
 #oc whoami
 
