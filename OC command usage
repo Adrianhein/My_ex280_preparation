@@ -6,6 +6,8 @@
 
 #oc get routes -n openshift-console
 
+=>Opsnshift administrator to check the status of the namespace
+#oc status -n <name of project>
 #oc status -n openshift-console
 
 #oc whoami
