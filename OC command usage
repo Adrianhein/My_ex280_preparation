@@ -1,5 +1,13 @@
 
 
+
+
+        -------------------------------------------------
+        |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 02| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 03| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        -------------------------------------------------
+
 =>Opsnshift administrator want to check for "oc" client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
     --------------------------------------------------------------------------------------------------
     | oc help                                                                                        |
