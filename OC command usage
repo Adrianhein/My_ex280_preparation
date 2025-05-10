@@ -61,6 +61,22 @@
     | oc logs --help                                                                                 |
     --------------------------------------------------------------------------------------------------
 
+#Logs
+oc logs -h
+
+# bc=> build config
+oc logs -f bc/<bc-name>
+oc logs -f bc/<bc-name> --version=<version-name>
+oc logs -f deployment/<deployment-name>
+oc logs -f deployment/<deployment-name> --version=<version-name>
+oc logs -f pod/<pod-name>
+
+oc adm node-logs <NODE-NAME>
+oc adm node-logs <NODE-NAME> --role master
+oc adm node-logs <NODE-NAME> --role master -u kublet
+
+
+
 =>Opsnshift administrator want to check for logs under "deployment"
     --------------------------------------------------------------------------------------------------
     | oc get deployments -n <project name>                                                           |
@@ -141,21 +157,6 @@ oc adm top nodes --sort-by=cpu
 oc adm top pods 
 oc adm top pods --namespaces=my-namespace
 oc adm top pods -l app=my-app-name
-
-
-#Logs
-oc logs -h
-
-# bc=> build config
-oc logs -f bc/<bc-name>
-oc logs -f bc/<bc-name> --version=<version-name>
-oc logs -f deployment/<deployment-name>
-oc logs -f deployment/<deployment-name> --version=<version-name>
-oc logs -f pod/<pod-name>
-
-oc adm node-logs <NODE-NAME>
-oc adm node-logs <NODE-NAME> --role master
-oc adm node-logs <NODE-NAME> --role master -u kublet
 
 
 # Health check inside OpenShift cluster
