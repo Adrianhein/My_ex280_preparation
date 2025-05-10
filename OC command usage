@@ -126,9 +126,16 @@ oc adm node-logs <NODE-NAME> --role master -u kublet
 
 #oc get pods --field-selector=status.phase=Running
 
-#Importing => oc apply -f my-app.yaml
 
+=>Opsnshift administrator want to import/export the yaml configs
+#Importing => oc apply -f my-app.yaml
 #Exporting => oc get deployment my-app -o yaml > exported-my-app.yaml
+oc get secret -n openshift-congif
+
+#Exporting => #oc extract secret/<secret name> -n openshift-config --to=./backup --confirm
+#Importing => #oc replace -f ./backup/<secret name> -n openshift-config
+#Importing => #oc create secret generic <secret name> --from-file=htpasswd=<secret name> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+
 
 
 #Container image stream = >
