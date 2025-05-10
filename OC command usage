@@ -110,6 +110,8 @@ oc adm node-logs <NODE-NAME> --role master -u kublet
 
 #oc get pods -l deployment=app-name
 
+#Querying | Filtering 
+
 #oc describe pods my-app-name | grep IP
 
 #oc describe pods my-app-name
@@ -164,6 +166,9 @@ oc get pods -n openshift-etcd
 oc -n openshift-etcd rsh etcd-crc
 
 oc get clusteroperators
+
+
+
 
 
 
