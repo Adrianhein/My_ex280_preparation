@@ -1,5 +1,27 @@
 
 
+    -------------------------------------------------
+    |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
+    |Master Node 02| 4 vCPUs | 16 GB RAM | 120 GB HD|
+    |Master Node 03| 4 vCPUs | 16 GB RAM | 120 GB HD|
+    -------------------------------------------------
+    |Worker Node 01| 2 vCPUs | 8 GB RAM | 120 GB HD |
+    |Worker Node 02| 2 vCPUs | 8 GB RAM | 120 GB HD |
+    |Worker Node 03| 2 vCPUs | 8 GB RAM | 120 GB HD |
+    -------------------------------------------------
+    |Boostrap Node | 2 vCPUs | 16 GB RAM | 120 GB HD|
+    -------------------------------------------------
+    |LoadBalancer  | 2 vCPUs | 4 GB RAM | 30 GB HD  |
+    -------------------------------------------------
+    |DNS Host      | 2 vCPUs | 4 GB RAM | 30 GB HD  |
+    -------------------------------------------------
+    |Registry Host | 4 vCPUs | 4 GB RAM | 500 GB HD |
+    -------------------------------------------------
+    |Git Host      | 4 vCPUs | 8 GB RAM | 1000 GB HD|
+    -------------------------------------------------
+    |Jump Host     | 4 vCPUs | 4 GB RAM | 30 GB HD  |
+    -------------------------------------------------
+
 =>Opsnshift administrator want to check for "oc" client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
     --------------------------------------------------------------------------------------------------
     | oc help                                                                                        |
