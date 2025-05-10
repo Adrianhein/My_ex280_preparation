@@ -1,6 +1,12 @@
 
 
+Possible Infra minimum setup requirement for fresh OpenShift Cluster
 
+        -------------------------------------------------
+        |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 02| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        |Master Node 03| 4 vCPUs | 16 GB RAM | 120 GB HD|
+        -------------------------------------------------
 
         -------------------------------------------------
         |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
