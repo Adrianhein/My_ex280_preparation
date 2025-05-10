@@ -34,16 +34,24 @@
     | oc status -A                                                                                   |
     --------------------------------------------------------------------------------------------------
 
-
-#oc whoami
-
-#oc new-project my-test-project
-
-#oc new-app --name=my-app --image=openshift/hello-openshift
-
-#oc status
+=>Opsnshift administrator want to check information about the current session
+    --------------------------------------------------------------------------------------------------
+    | oc whoami                                                                                      |
+    --------------------------------------------------------------------------------------------------
 
 
+=>Opsnshift administrator want to create new project for task
+    --------------------------------------------------------------------------------------------------
+    | oc new-project <project name>                                                                  |
+    --------------------------------------------------------------------------------------------------
+
+=>Opsnshift administrator want to create new application for deployment inside the specific project
+    --------------------------------------------------------------------------------------------------
+    | oc new-app --name=<app name> --image=image_repositories -n <project name>                      |
+    --------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------
+    | #oc new-app --name=my-app --image=openshift/hello-openshift -n <project name>                  |
+    --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for logs
     --------------------------------------------------------------------------------------------------
