@@ -26,8 +26,13 @@
 
 
 =>Opsnshift administrator want to check for logs
-#oc logs
-#oc logs --help
+
+    -------------------------------------------------
+    | oc logs                                       |
+    -------------------------------------------------
+    -------------------------------------------------
+    | oc logs --help                                |
+    -------------------------------------------------
 
 =>Opsnshift administrator want to check for logs under "deployment"
 #oc get deployments -n <project name>
