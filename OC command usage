@@ -10,6 +10,9 @@
 #oc status -n <name of project>
 #oc status -n openshift-console
 
+=>Opsnshift administrator want to check for all status of the namespaces
+#oc status -A
+
 #oc whoami
 
 #oc whoami --show-console
