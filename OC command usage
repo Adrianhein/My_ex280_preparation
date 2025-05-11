@@ -193,12 +193,19 @@ oc adm top pods
 oc adm top pods --namespaces=my-namespace
 oc adm top pods -l app=my-app-name
 
-
-# Health check inside OpenShift cluster
+=>Opsnshift administrator want to access for health checking inside OpenShift cluster
+oc get nodes
+oc desctibe nodes
+oc get componentstatus
 oc get pods -n openshift-etcd
 oc -n openshift-etcd rsh etcd-crc
 
-oc get clusteroperators
+=>Opsnshift administrator want to check the OPERATORS which is key component of the OpenShift clster that handle the lifecycle management of the various resources and services
+    --------------------------------------------------------------------------------------------------
+    |oc get clusteroperators                                                                         |
+    |oc describe clusteroperators                                                                    |
+    --------------------------------------------------------------------------------------------------
+
 
 
 
