@@ -45,6 +45,17 @@ Deleting user from OpenShift steps:
 
 
    => Modify user passwords
+      
+    1) Update htpassd file 
+    htpasswd -Bb htpasswd_user_list.txt trump america_second
+
+    2) Get secret name from "openshift-config" project
+    oc get secret -n openshift-config
+
+    3) Update secret name from "openshift-config" project
+    oc create secret generic <secret name> --from-file=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+
+
    =>  Create and manage groups
       
       oc adm groups new <grop-name>    
