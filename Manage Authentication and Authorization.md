@@ -103,14 +103,15 @@ Deleting user from OpenShift steps:
        oc adm policy remove-role-from-group <role> <group-name> -n <project>  <<<< removing role from group
        oc adm policy who-can <verb> <resource>                                <<<<< Listing user and grup with permission
 
-
-       ## To remove "self-provisioner" role from "system:authenticated:oauth" GROUP
+#
+=> To remove "self-provisioner" role from "system:authenticated:oauth" GROUP
 #       
        oc get clusterrolebinding -o wide | (head -n 1 && grep self-provisioner)
        NAME               ROLE                         AGE   USERS    GROUPS                      SERVICEACCOUNTS
        self-provisioners  ClusterRole/self-provisioner 78d            system:authenticated:oauth                     
 #
        oc adm policy remove-cluster-role-from-group self-provisioner system:authenticated:oauth 
-
+[self-provisioner  vs  self-provisioners](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Appendix)
+#
 
 https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
