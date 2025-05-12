@@ -69,6 +69,20 @@ WEB UI View
  =>   Configure project limit ranges
  #
  =>   Configure project templates
+#
+=> The difference between ResourceQuota and ClusterResourceQuota 
+🔹 ResourceQuota (Standard Kubernetes)
+🔸 ClusterResourceQuota (OpenShift-only)
+
+    | ------------------------------ | --------------- | ------------------------------ |
+    | Feature                        | `ResourceQuota` | `ClusterResourceQuota`         |
+    | ------------------------------ | --------------- | ------------------------------ |
+    | Scope                          | Namespace-only  | Cluster-wide (multi-namespace) |
+    | Available in Kubernetes        | ✅ Yes           | ❌ No                         |
+    | Available in OpenShift         | ✅ Yes           | ✅ Yes                        |
+    | Based on label selector        | ❌ No            | ✅ Yes                        |
+    | Applies to multiple namespaces | ❌ No            | ✅ Yes                        |
+    | ------------------------------ | --------------- | ------------------------------ |
 
 
 [EX280](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives)
