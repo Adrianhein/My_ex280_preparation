@@ -117,4 +117,4 @@ Deleting user from OpenShift steps:
        oc adm policy remove-cluster-role-from-group self-provisioner system:authenticated:oauth 
 #
 
-https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
+[EX280](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives)
