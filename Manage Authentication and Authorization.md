@@ -78,7 +78,7 @@ Deleting user from OpenShift steps:
       # ROLE BASE ACCESS CONTROL (RBAC)
       # ROLE                          :=> collection of permissions which assigned to users or groups 
       # Two types of ROLE             :=>  [ Cluster RBAC and Local RBAC ]  
-      # Roles defined by these words  :=> [ get list view watch delete update patch create ]
+      # Roles defined by these verbs  :=> [ get list view watch delete update patch create ]
       # Role binding, that is connecting roles to the users or gruops
 
       # Default roles :
