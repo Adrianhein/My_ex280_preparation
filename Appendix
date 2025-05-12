@@ -129,6 +129,10 @@ root
 sh-5.1# ls
 192.168.126.11:0  afs  bin  boot  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 sh-5.1# 
+sh-5.1# etcdctl --help
+sh-5.1# etcdctl endpoint status
+https://192.168.126.11:2379, d44fc94b15474c4c, 3.5.17, 76 MB, true, false, 11, 1243461, 1243461, 
+sh-5.1# 
 sh-5.1# exit
 exit
 [sysadm@openshift-local-01 ~]$ 
