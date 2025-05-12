@@ -89,7 +89,7 @@ Deleting user from OpenShift steps:
         'cluster-reader'     << R-O across cluster access
         'edit'               << can modify objects in project access
         'self-provisioner'   << can create own project access
-
+       
 
        oc get clusterrolebinding.rbac                                         <<<<< to check role binding at cluster wide
        oc get rolebinding.rbac                                                <<<<< to check role binding at project level
@@ -102,6 +102,15 @@ Deleting user from OpenShift steps:
        oc adm policy add-role-to-group <role> <group-name> -n <project>       <<<< assigning role to group
        oc adm policy remove-role-from-group <role> <group-name> -n <project>  <<<< removing role from group
        oc adm policy who-can <verb> <resource>                                <<<<< Listing user and grup with permission
+
+
+       ## To remove "self-provisioner" role from "system:authenticated:oauth" GROUP
+#       
+       oc get clusterrolebinding -o wide | (head -n 1 && grep self-provisioner)
+       NAME               ROLE                         AGE   USERS    GROUPS                      SERVICEACCOUNTS
+       self-provisioners  ClusterRole/self-provisioner 78d            system:authenticated:oauth                     
+#
+       oc adm policy remove-cluster-role-from-group self-provisioner system:authenticated:oauth 
 
 
 https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
