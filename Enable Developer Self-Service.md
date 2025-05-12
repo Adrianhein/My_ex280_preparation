@@ -1,6 +1,6 @@
 
 
-#Enable Developer Self-Service
+Project Quotas
 
  =>   Configure cluster resource quotas
 
