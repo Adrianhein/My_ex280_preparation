@@ -59,6 +59,11 @@ Deleting user from OpenShift steps:
    =>  Create and manage groups
    
       # group :=> collection of users that sharing common "ROLE"
+      # There are three default virtual groups:
+        - All authenticated users  = system:authenticated
+        - All unauthenticated users   = system:unauthenticated
+        - Users authenticated with OAuth tokens   = system:authenticated:oauth
+          
       oc adm groups new <grop-name>    
       oc adm groups new <group-name> <users1 users2 users3>      
       oc adm add-users <group-name> <users4 users5>                     <<<< adding users to existing group
