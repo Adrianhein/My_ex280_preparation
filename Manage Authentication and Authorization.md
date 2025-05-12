@@ -23,7 +23,7 @@ Types of users in OpenShift:-
     - System user
     - Services account
  
-Deleting user from OpenShift:
+Deleting user from OpenShift steps:
  
     ##Get secret name from "openshift-config" project
     oc get secret -n openshift-config
