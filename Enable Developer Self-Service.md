@@ -82,6 +82,7 @@ WEB UI View
             memory: 256Mi
           type: Container
 
+   `oc create -f <file name>.yaml -n <project name>`
  
  #
  =>   Configure project templates
