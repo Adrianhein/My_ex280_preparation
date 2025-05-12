@@ -93,7 +93,7 @@ WEB UI View
 
 `oc adm create-bootstrap-project-template -o yaml > project_template.yaml`
 
-less project_template.yaml
+`less project_template.yaml`
 
     apiVersion: template.openshift.io/v1
     kind: Template
@@ -126,12 +126,42 @@ less project_template.yaml
       - apiGroup: rbac.authorization.k8s.io
         kind: User
         name: ${PROJECT_ADMIN_USER}
+     ### Add here "Sample_Template_Resource_Definition.yaml" entries ###
+     ### Add here "Sample_Template_Resource_Definition.yaml" entries ###
+     ### Add here "Sample_Template_Resource_Definition.yaml" entries ###
     parameters:
     - name: PROJECT_NAME
     - name: PROJECT_DISPLAYNAME
     - name: PROJECT_DESCRIPTION
     - name: PROJECT_ADMIN_USER
     - name: PROJECT_REQUESTING_USER
+
+
+less Sample_Template_Resource_Definition.yaml
+
+    - apiVersion: v1
+      kind: ResourceQuota
+      metadata:
+       name: $(PROJECT_NAME)-quota
+      spec:
+       hard: 
+         cpu: "2"
+         memory: 4Gi
+         pods: "10"
+    - apiVersion: v1
+      kind: LimitRange
+      metadata:
+       name: $(PROJECT_NAME)-limit-range
+       namespace: default
+      spec:
+       limits:
+         - default:
+            memory: 1Gi
+            cpu: "200m"
+           defaultRequest:
+            memory: 256Mi
+            cpu: "10m"
+           type: Container
 
 #
 #
