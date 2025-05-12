@@ -188,6 +188,17 @@ Then:
 
 `oc get pod -n openshift-apiserver -w`
 
+    [sysadm@openshift-local-01 ~]$ oc get pod -n openshift-apiserver
+    NAME                        READY   STATUS    RESTARTS   AGE
+    apiserver-b4859c89f-66qkf   2/2     Running   0          2m36s
+    [sysadm@openshift-local-01 ~]$ 
+
+`oc new-project test-project`
+
+`oc get quota -n test-project`
+
+`oc describe limitrange -n test-project`
+
 #
 => The difference between ResourceQuota and ClusterResourceQuota 
 
