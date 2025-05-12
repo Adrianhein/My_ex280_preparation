@@ -1,7 +1,7 @@
 
 => Manage Authentication and Authorization: 
 
-        sudo dnf install httpd-tools -y                  #if htpasswd was not installed yet.
+    sudo dnf install httpd-tools -y                  #if htpasswd was not installed yet.
 
 => Configure the HTPasswd identity provider for authentication
 #Generating htpasswd file and then upload to the openshift. #dnf install -y httpd-tools
