@@ -104,7 +104,7 @@ Deleting user from OpenShift steps:
        oc adm policy who-can <verb> <resource>                                <<<<< Listing user and grup with permission
 
 #
-Different between self-provisioner  vs  self-provisioners :[go to](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Appendix) 
+=> Different between self-provisioner  vs  self-provisioners :[go to](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Appendix) 
 #
 => To remove "self-provisioner" role from "system:authenticated:oauth" GROUP
 
