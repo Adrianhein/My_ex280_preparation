@@ -10,7 +10,7 @@
     | htpasswd -cBb htpasswd_user_list.txt trump america_first                                       |
     | htpasswd -Bb htpasswd_user_list.txt putin black_belt_Karate-Do                                 |
     --------------------------------------------------------------------------------------------------
-[Alt text](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Screenshot%20From%202025-05-12%2010-04-05.png?raw=true)
+[Alt text](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Screenshot%20From%202025-05-12%2010-04-05.png)
 
 
    => Create and delete users
