@@ -32,6 +32,26 @@ WEB UI View
 ![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/ResourceQuota_1.png)
 
 #
+#
+=> Default value when we will create quota:
+![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/create%20quota%20default%20value.png)
+
+
+    apiVersion: v1
+    kind: ResourceQuota
+    metadata:
+      name: example
+      namespace: default
+    spec:
+      hard:
+        pods: '4'
+        requests.cpu: '1'
+        requests.memory: 1Gi
+        limits.cpu: '2'
+        limits.memory: 2Gi
+
+#
+#
  =>   Configure cluster resource quotas
 
     oc create clusterresourcequota -h
