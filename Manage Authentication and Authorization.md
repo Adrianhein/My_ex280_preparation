@@ -40,50 +40,46 @@ Deleting user from OpenShift:
     oc delete user <user>
 
     #Identify and delete the "identity" in the openshift cluster
-    oc get identity
-    oc delete identity <identity>:<users>
+      oc get identity
+      oc delete identity <identity>:<users>
 
 
    => Modify user passwords
    =>  Create and manage groups
-      #oc adm groups new <grop-name>
-      #oc adm groups new <group-name> <users1 users2 users3>
-      #oc adm add-users <group-name> <users4 users5>                <<<< adding users to existing group
-
-      #oc adm policy add-role-to-group view <group-name> -n my-project   <<<< assigning group roles
+      
+      oc adm groups new <grop-name>    
+      oc adm groups new <group-name> <users1 users2 users3>      
+      oc adm add-users <group-name> <users4 users5>                     <<<< adding users to existing group
+      oc adm policy add-role-to-group view <group-name> -n my-project   <<<< assigning group roles
 
 
 
    =>  Modify user and group permissions
    
       # ROLE BASE ACCESS CONTROL (RBAC)
-      # ROLE = collection of permissions which assigned to users or groups 
-      # Two types of ROLE :=>  [ Cluster RBAC and Local RBAC ]  
-      # Roles defined by these words :=> [ get list view watch delete update patch create ]
+      # ROLE                          :=> collection of permissions which assigned to users or groups 
+      # Two types of ROLE             :=>  [ Cluster RBAC and Local RBAC ]  
+      # Roles defined by these words  :=> [ get list view watch delete update patch create ]
       # Role binding, that is connecting roles to the users or gruops
 
       # Default roles :
-        'admin' << Project admin access
-        'basic-user' << R-O view basic info access
-        'cluster-admin' << Full Superuser access
-        'cluster-status' << R-O to view the cluster status access
-        'cluster-reader' << R-O across cluster access
-        'edit'  << can modify objects in project access
-        'self-provisioner'  << can create own project access
+        'admin'              << Project admin access
+        'basic-user'         << R-O view basic info access
+        'cluster-admin'      << Full Superuser access
+        'cluster-status'     << R-O to view the cluster status access
+        'cluster-reader'     << R-O across cluster access
+        'edit'               << can modify objects in project access
+        'self-provisioner'   << can create own project access
 
 
-      #oc describe clusterrolebinding.rbac             <<<<< to check role binding at cluster wide
-
-      #oc describe rolebinding.rbac         <<<<< to check role binding at project level
-
-      #oc describe rolebinding.rbac -n my-project         <<<<< to check role binding at specific project
-
-      #oc adm policy add-role-to-user <role> <user-name> -n <project>   <<<< assigning role to user
-      #oc adm policy remove-role-from-user <role> <user-name> -n <project>   <<<< removing role from user
-
-      #oc adm policy add-role-to-group <role> <group-name> -n <project>                  <<<< assigning role to group
-      #oc adm policy remove-role-from-group <role> <group-name> -n <project>             <<<< removing role from group
-      #oc adm policy who-can <verb> <resource>             <<<<< Listing user and grup with permission
+       oc describe clusterrolebinding.rbac                                    <<<<< to check role binding at cluster wide
+       oc describe rolebinding.rbac                                           <<<<< to check role binding at project level
+       oc describe rolebinding.rbac -n my-project                             <<<<< to check role binding at specific project
+       oc adm policy add-role-to-user <role> <user-name> -n <project>         <<<< assigning role to user
+       oc adm policy remove-role-from-user <role> <user-name> -n <project>    <<<< removing role from user
+       oc adm policy add-role-to-group <role> <group-name> -n <project>       <<<< assigning role to group
+       oc adm policy remove-role-from-group <role> <group-name> -n <project>  <<<< removing role from group
+       oc adm policy who-can <verb> <resource>                                <<<<< Listing user and grup with permission
 
 
 https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives
