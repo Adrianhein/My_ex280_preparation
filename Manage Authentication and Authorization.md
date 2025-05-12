@@ -57,7 +57,8 @@ Deleting user from OpenShift steps:
 
 
    =>  Create and manage groups
-      
+   
+      # group :=> collection of users that sharing common "ROLE"
       oc adm groups new <grop-name>    
       oc adm groups new <group-name> <users1 users2 users3>      
       oc adm add-users <group-name> <users4 users5>                     <<<< adding users to existing group
