@@ -6,6 +6,15 @@
 #[Red Hat Certified OpenShift Administrator exam: WHAT YOU NEED TO KNOW](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=what-you-need-to-know)
 #
 
+Sections:
+
+    Red Hat OpenShift Platform Architecture
+    Red Hat OpenShift Editions
+    Red Hat OpenShift Installation
+    Red Hat Openshift Networking
+    Red Hat Certified OpenShift Administrator exam
+
+
 => [OpenShift_Local_LabEnvironment](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift_Local_LabEnv_0.2.pdf)
 
 #
