@@ -2,6 +2,7 @@
 
 => Configure the HTPasswd identity provider for authentication
 #Generating htpasswd file and then upload to the openshift. #dnf install -y httpd-tools
+
     --------------------------------------------------------------------------------------------------
     | htpasswd -nbB <User list name> username password                                               |
     --------------------------------------------------------------------------------------------------
@@ -9,7 +10,8 @@
     | htpasswd -cBb htpasswd_user_list.txt trump america_first                                       |
     | htpasswd -Bb htpasswd_user_list.txt putin black_belt_Karate-Do                                 |
     --------------------------------------------------------------------------------------------------
-![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/IdentityProvider.png)
+   
+   ![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/IdentityProvider.png)
 
 
    => Create and delete users
