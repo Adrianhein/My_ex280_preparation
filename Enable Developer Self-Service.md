@@ -88,8 +88,52 @@ WEB UI View
    
    `oc describe limits <limitrange name> -n <project name>`
  
- #
+#
  =>   Configure project templates
+
+`oc adm create-bootstrap-project-template -o yaml > project_template.yaml`
+
+less project_template.yaml
+
+    apiVersion: template.openshift.io/v1
+    kind: Template
+    metadata:
+      creationTimestamp: null
+      name: project-request
+    objects:
+    - apiVersion: project.openshift.io/v1
+      kind: Project
+      metadata:
+        annotations:
+          openshift.io/description: ${PROJECT_DESCRIPTION}
+          openshift.io/display-name: ${PROJECT_DISPLAYNAME}
+          openshift.io/requester: ${PROJECT_REQUESTING_USER}
+        creationTimestamp: null
+        name: ${PROJECT_NAME}
+      spec: {}
+      status: {}
+    - apiVersion: rbac.authorization.k8s.io/v1
+      kind: RoleBinding
+      metadata:
+        creationTimestamp: null
+        name: admin
+        namespace: ${PROJECT_NAME}
+      roleRef:
+        apiGroup: rbac.authorization.k8s.io
+        kind: ClusterRole
+        name: admin
+      subjects:
+      - apiGroup: rbac.authorization.k8s.io
+        kind: User
+        name: ${PROJECT_ADMIN_USER}
+    parameters:
+    - name: PROJECT_NAME
+    - name: PROJECT_DISPLAYNAME
+    - name: PROJECT_DESCRIPTION
+    - name: PROJECT_ADMIN_USER
+    - name: PROJECT_REQUESTING_USER
+
+#
 #
 => The difference between ResourceQuota and ClusterResourceQuota 
 
