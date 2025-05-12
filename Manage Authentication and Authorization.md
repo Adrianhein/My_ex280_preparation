@@ -91,6 +91,9 @@ Deleting user from OpenShift steps:
         'self-provisioner'   << can create own project access
 
 
+       oc get clusterrolebinding.rbac                                         <<<<< to check role binding at cluster wide
+       oc get rolebinding.rbac                                                <<<<< to check role binding at project level
+       oc get rolebinding.rbac -n my-project                                  <<<<< to check role binding at specific project
        oc describe clusterrolebinding.rbac                                    <<<<< to check role binding at cluster wide
        oc describe rolebinding.rbac                                           <<<<< to check role binding at project level
        oc describe rolebinding.rbac -n my-project                             <<<<< to check role binding at specific project
