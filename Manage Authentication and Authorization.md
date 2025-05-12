@@ -3,6 +3,7 @@
 
 => Configure the HTPasswd identity provider for authentication
 #Generating htpasswd file and then upload to the openshift. #dnf install -y httpd-tools
+    
     --------------------------------------------------------------------------------------------------
     | htpasswd -nbB <User list name> username password                                               |
     --------------------------------------------------------------------------------------------------
@@ -10,13 +11,21 @@
     | htpasswd -cBb htpasswd_user_list.txt trump america_first                                       |
     | htpasswd -Bb htpasswd_user_list.txt putin black_belt_Karate-Do                                 |
     --------------------------------------------------------------------------------------------------
+
 ![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/IdentityProvider.png)
 
 
    => Create and delete users
-      # Types of users in OpenShift- [ Regular / System / Services ]
-
-
+      # Types of users in OpenShift- [ Regular user ; System user ; Services account ]
+#=>Deleting user from OpenShift:
+     
+    oc get secret -n openshift-config
+    oc create secret generic --help
+    oc create secret generic <secret name> --from-file=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+    oc get users
+    oc delete user <users> 
+    oc get identity
+    oc delete identity <identity>:<users>
 
    => Modify user passwords
    =>  Create and manage groups
