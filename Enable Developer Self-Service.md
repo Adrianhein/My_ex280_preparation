@@ -83,9 +83,9 @@ WEB UI View
           type: Container
 
    `oc get limits`
-   #
+   
    `oc create -f <file name>.yaml -n <project name>`
-   #
+   
    `oc describe limits <limitrange name> -n <project name>`
  
  #
