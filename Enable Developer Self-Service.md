@@ -2,6 +2,32 @@
 
 Project Quotas
 
+Terminal View
+
+    [sysadm@openshift-local-01 ~]$ oc get quota
+    No resources found in default namespace.
+    [sysadm@openshift-local-01 ~]$ oc get quota -n openshift-host-network
+    NAME                            AGE   REQUEST                                                              LIMIT
+    host-network-namespace-quotas   78d   count/daemonsets.apps: 0/0, count/deployments.apps: 0/0, pods: 0/0   limits.cpu: 0/0, limits.memory: 0/0
+    [sysadm@openshift-local-01 ~]$ 
+    [sysadm@openshift-local-01 ~]$ oc get quota host-network-namespace-quotas -n openshift-host-network
+    NAME                            AGE   REQUEST                                                              LIMIT
+    host-network-namespace-quotas   78d   count/daemonsets.apps: 0/0, count/deployments.apps: 0/0, pods: 0/0   limits.cpu: 0/0, limits.memory: 0/0
+    [sysadm@openshift-local-01 ~]$ 
+    [sysadm@openshift-local-01 ~]$ oc describe quota host-network-namespace-quotas -n openshift-host-network
+    Name:                   host-network-namespace-quotas
+    Namespace:              openshift-host-network
+    Resource                Used  Hard
+    --------                ----  ----
+    count/daemonsets.apps   0     0
+    count/deployments.apps  0     0
+    limits.cpu              0     0
+    limits.memory           0     0
+    pods                    0     0
+    [sysadm@openshift-local-01 ~]$ 
+
+
+
  =>   Configure cluster resource quotas
 
     oc create clusterresourcequota -h
