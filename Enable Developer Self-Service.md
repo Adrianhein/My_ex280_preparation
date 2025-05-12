@@ -2,6 +2,7 @@
 
 Project Quotas
 
+#
 Terminal View
 
     [sysadm@openshift-local-01 ~]$ oc get quota
@@ -26,8 +27,10 @@ Terminal View
     pods                    0     0
     [sysadm@openshift-local-01 ~]$ 
 
+WEB UI View
+![Photo](https://github.com/Adrianhein/My_ex280_preparation/blob/main/images/ResourceQuota.png)
 
-
+#
  =>   Configure cluster resource quotas
 
     oc create clusterresourcequota -h
