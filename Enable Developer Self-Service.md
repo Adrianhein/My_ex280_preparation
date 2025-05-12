@@ -180,7 +180,7 @@ Then:
     spec:
       projectRequestTemplate:
         name: project-request
-    
+  #  
     [sysadm@openshift-local-01 ~]$ oc edit projects.config.openshift.io/cluster
     project.config.openshift.io/cluster edited
     [sysadm@openshift-local-01 ~]$ 
