@@ -164,6 +164,30 @@ less Sample_Template_Resource_Definition.yaml
            type: Container
 
 #
+Then:
+
+`oc create -f project_template.yaml -n openshift-config`
+
+    [sysadm@openshift-local-01 ~]$ oc create -f project_template.yaml -n openshift-config
+    template.template.openshift.io/project-request created
+    [sysadm@openshift-local-01 ~]$ 
+
+
+Then:
+
+`oc edit projects.config.openshift.io/cluster`  # Add project template inside "spec: {}" block
+
+    spec:
+      projectRequestTemplate:
+        name: project-request
+    
+    [sysadm@openshift-local-01 ~]$ oc edit projects.config.openshift.io/cluster
+    project.config.openshift.io/cluster edited
+    [sysadm@openshift-local-01 ~]$ 
+
+
+`oc get pod -n openshift-apiserver -w`
+
 #
 => The difference between ResourceQuota and ClusterResourceQuota 
 
