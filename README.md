@@ -90,15 +90,11 @@ Possible Infra minimum setup requirement for fresh OpenShift Cluster
 
         
 
-[Useful URL](https://github.com/mgonzalezo/RedHat_ex280)
-
-[Useful URL]
-
-[Useful URL]
-
-[Useful URL]
-
-[Useful URL]
+[Useful URL1](https://github.com/mgonzalezo/RedHat_ex280)
+[Useful URL2](https://www.udemy.com/course/openshift-administration/?couponCode=KEEPLEARNING)
+[Useful URL3]
+[Useful URL4]
+[Useful URL5]
 
 
 
