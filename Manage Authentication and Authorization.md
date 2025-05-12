@@ -73,8 +73,7 @@ Deleting user from OpenShift steps:
 
 
 
-   =>  Modify user and group permissions
-# ROLE BASE ACCESS CONTROL (RBAC)
+   =>  Modify user and group permissions < ROLE BASE ACCESS CONTROL (RBAC) >
    
       # ROLE BASE ACCESS CONTROL (RBAC)
       # ROLE                          :=> collection of permissions which assigned to users or groups 
