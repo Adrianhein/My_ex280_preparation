@@ -16,16 +16,33 @@
 
 
    => Create and delete users
-      # Types of users in OpenShift- [ Regular user ; System user ; Services account ]
-#=>Deleting user from OpenShift:
-     
+   
+Types of users in OpenShift:-
+
+    - Regular user
+    - System user
+    - Services account
+ 
+Deleting user from OpenShift:
+ 
+    ##Get secret name from "openshift-config" project
     oc get secret -n openshift-config
     oc create secret generic --help
+
+    ##Update or removed from htpasswd file for the users need to be deleted
+    vim htpasswd_user_list.txt
+
+    ##Update secret name from "openshift-config" project
     oc create secret generic <secret name> --from-file=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+
+    #Identify and delete the users in the openshift cluster
     oc get users
-    oc delete user <users> 
+    oc delete user <user>
+
+    #Identify and delete the "identity" in the openshift cluster
     oc get identity
     oc delete identity <identity>:<users>
+
 
    => Modify user passwords
    =>  Create and manage groups
