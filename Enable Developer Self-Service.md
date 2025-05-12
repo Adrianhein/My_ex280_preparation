@@ -66,21 +66,22 @@ WEB UI View
  #
  =>   Configure project resource requirements
  #
- =>   Configure project limit ranges
- `
-apiVersion: v1
-kind: LimitRange
-metadata:
-  name: mem-limit-range
-  namespace: default
-spec:
-  limits:
-    - default:
-        memory: 512Mi
-      defaultRequest:
-        memory: 256Mi
-      type: Container
-`
+=>   Configure project limit ranges
+`Default value when we will create LimitRange`
+
+    apiVersion: v1
+    kind: LimitRange
+    metadata:
+      name: mem-limit-range
+      namespace: default
+    spec:
+      limits:
+        - default:
+            memory: 512Mi
+          defaultRequest:
+            memory: 256Mi
+          type: Container
+
  
  #
  =>   Configure project templates
