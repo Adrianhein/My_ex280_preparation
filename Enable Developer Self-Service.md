@@ -71,7 +71,9 @@ WEB UI View
  =>   Configure project templates
 #
 => The difference between ResourceQuota and ClusterResourceQuota 
+
 🔹 ResourceQuota (Standard Kubernetes)
+
 🔸 ClusterResourceQuota (OpenShift-only)
 
     | ------------------------------ | --------------- | ------------------------------ |
