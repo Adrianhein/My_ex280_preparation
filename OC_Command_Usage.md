@@ -186,11 +186,16 @@
     oc delete project my-project-name
 
 
-oc get deployments
-oc get deployments -n openshift-apiserver
-oc get apiserver
+=>Opsnshift administrator want to check "apiserver"
 
-oc get pods --all-namespaces
+    oc get deployments
+    oc get deployments -n openshift-apiserver
+    oc get apiserver
+
+
+=>Opsnshift administrator want to list all pods across clusterwide
+
+    oc get pods --all-namespaces
 
 =>Opsnshift administrator want to list all the nodes in the clutser
 
@@ -198,9 +203,9 @@ oc get pods --all-namespaces
     oc get componentstatus
 
 
-#OC ADM command
+#OC ADM command usage
 
-    oc adm
+    oc adm --help
     oc adm top nodes 
     oc adm top nodes --sort-by=cpu
     oc adm top pods 
