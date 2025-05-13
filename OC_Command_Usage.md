@@ -138,52 +138,55 @@ oc logs -h
 
 
 =>Opsnshift administrator want to do "Querying, Filtering"
-#oc get all
-#oc get deployment -n <project name> -o wide
-#oc get deployment -n <project name> -o yam
-#oc describe deployment -n <project name>
-#oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
 
-#oc describe pods -n <project name>
+    #oc get all
+    #oc get deployment -n <project name> -o wide
+    #oc get deployment -n <project name> -o yam
+    #oc describe deployment -n <project name>
+    #oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
 
-#oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
-#oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
+    #oc describe pods -n <project name>
 
-#oc get pods -l deployment=<app name>
-#oc describe pods my-app-name | grep IP
+    #oc get deployments -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
+    #oc get pods -o custom-columns=NAME:.metadata.name,RSRC:.metadata.labels,NAMESPACE:.metadata.namespace,STATUS:.status.phase,REPLICAS:.spec.replicas
 
-#oc describe pods my-app-name
+    #oc get pods -l deployment=<app name>
+    #oc describe pods my-app-name | grep IP
 
-#oc get pods my-app-name -o yaml
-
-#oc get pods --field-selector=status.phase=Running
+    #oc describe pods my-app-name
+    #oc get pods my-app-name -o yaml
+    #oc get pods --field-selector=status.phase=Running
 
 
 =>Opsnshift administrator want to import/export the yaml configs
-#Importing => oc apply -f my-app.yaml
-#Exporting => oc get deployment my-app -o yaml > exported-my-app.yaml
-oc get secret -n openshift-congif
 
-#Exporting => #oc extract secret/<secret name> -n openshift-config --to=./backup --confirm
-#Importing => #oc replace -f ./backup/<secret name> -n openshift-config
-#Importing => #oc create secret generic <secret name> --from-file=htpasswd=<secret name> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+    #Importing => oc apply -f my-app.yaml
+    #Exporting => oc get deployment my-app -o yaml > exported-my-app.yaml
+    oc get secret -n openshift-congif
 
-
-
-#Container image stream = >
-oc get imagestream -n openshift
-oc describe imagestream <IMAGE_NAME> -n openshift
-oc get image sha256:b80a514f136f738736d
-oc describe image sha256:b80a514f136f738736d
+    #Exporting => #oc extract secret/<secret name> -n openshift-config --to=./backup --confirm
+    #Importing => #oc replace -f ./backup/<secret name> -n openshift-config
+    #Importing => #oc create secret generic <secret name> --from-file=htpasswd=<secret name> --dry-run=client -o yaml -n openshift-config | oc replace -f -
 
 
-#Create project and app
-oc new-project my-project-name --description='My New Project' --display-name='My Test'
-oc new-app --name=my-app --image=openshift/hello-openshift
-oc describe project my-project-name
 
-#Delete project
-oc delete project my-project-name
+=>Opsnshift administrator want to list Container image stream 
+
+    oc get imagestream -n openshift
+    oc describe imagestream <IMAGE_NAME> -n openshift
+    oc get image sha256:b80a514f136f738736d
+    oc describe image sha256:b80a514f136f738736d
+
+
+=>Opsnshift administrator want to Create project and app
+
+    oc new-project my-project-name --description='My New Project' --display-name='My Test'
+    oc new-app --name=my-app --image=openshift/hello-openshift
+    oc describe project my-project-name
+
+=>Opsnshift administrator want to delete project
+
+    oc delete project my-project-name
 
 
 oc get deployments
@@ -192,18 +195,20 @@ oc get apiserver
 
 oc get pods --all-namespaces
 
-## To list all the nodes in the clutser
-oc get nodes
-oc get componentstatus
+=>Opsnshift administrator want to list all the nodes in the clutser
+
+    oc get nodes
+    oc get componentstatus
 
 
 #OC ADM command
-oc adm
-oc adm top nodes 
-oc adm top nodes --sort-by=cpu
-oc adm top pods 
-oc adm top pods --namespaces=my-namespace
-oc adm top pods -l app=my-app-name
+
+    oc adm
+    oc adm top nodes 
+    oc adm top nodes --sort-by=cpu
+    oc adm top pods 
+    oc adm top pods --namespaces=my-namespace
+    oc adm top pods -l app=my-app-name
 
 =>Opsnshift administrator want to access for health checking inside OpenShift cluster
     
