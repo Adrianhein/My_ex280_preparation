@@ -16,9 +16,9 @@
 
 => 04 [OC command not found error](https://github.com/Adrianhein/My_ex280_preparation/blob/main/If%20oc%20command%20not%20found)
 #
-=> 05 [OC command usage](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OC_Command_Usage.md)
+=> 05 
 
-Manage OpenShift Container Platform
+Manage OpenShift Container Platform with [oc command](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OC_Command_Usage.md)
 
     Use the web console to manage and configure an OpenShift cluster
     Use the command-line interface to manage and configure an OpenShift cluster
