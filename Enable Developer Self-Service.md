@@ -186,7 +186,7 @@ Then:
     [sysadm@openshift-local-01 ~]$ 
 
 
-`oc get pod -n openshift-apiserver -w`
+Reverifying again api pod is restarted itself after editing "projects.config.openshift.io/cluster"  `oc get pod -n openshift-apiserver -w`
 
     [sysadm@openshift-local-01 ~]$ oc get pod -n openshift-apiserver
     NAME                        READY   STATUS    RESTARTS   AGE
