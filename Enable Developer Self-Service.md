@@ -193,11 +193,37 @@ Then:
     apiserver-b4859c89f-66qkf   2/2     Running   0          2m36s
     [sysadm@openshift-local-01 ~]$ 
 
-`oc new-project test-project`
+`oc new-project a-test`
 
-`oc get quota -n test-project`
+`oc get quota -n a-test`
 
-`oc describe limitrange -n test-project`
+`oc describe limitrange -n a-test`
+
+See the result:
+
+        [sysadm@openshift-local-01 ~]$ oc new-project a-test
+        Now using project "a-test" on server "https://api.crc.testing:6443".
+
+        You can add applications to this project with the 'new-app' command. For example, try:
+
+            oc new-app rails-postgresql-example
+
+        to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+            kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.43 -- /agnhost serve-hostname
+
+        [sysadm@openshift-local-01 ~]$ oc get quota
+        NAME           AGE   REQUEST                               LIMIT
+        a-test-quota   8s    cpu: 0/2, memory: 0/4Gi, pods: 0/10   
+        [sysadm@openshift-local-01 ~]$ oc describe limitrange
+        Name:       a-test-limit-range
+        Namespace:  a-test
+        Type        Resource  Min  Max  Default Request  Default Limit  Max Limit/Request Ratio
+        ----        --------  ---  ---  ---------------  -------------  -----------------------
+        Container   cpu       -    -    10m              200m           -
+        Container   memory    -    -    256Mi            1Gi            -
+        [sysadm@openshift-local-01 ~]$ 
+
 
 #
 => The difference between ResourceQuota and ClusterResourceQuota 
