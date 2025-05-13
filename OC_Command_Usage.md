@@ -73,7 +73,7 @@
 #Logs
 oc logs -h
 
-# bc=> build config
+#bc=> build config
 =>Opsnshift administrator want to check for logs 
     
     --------------------------------------------------------------------------------------------------
