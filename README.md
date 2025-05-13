@@ -16,7 +16,7 @@
 
 => 04 [OC command not found error](https://github.com/Adrianhein/My_ex280_preparation/blob/main/If%20oc%20command%20not%20found)
 
-=> 05 []()
+=> 05 [OC command usage](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OC_Command_Usage.md)
 
 => 06 []()
 
