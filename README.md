@@ -33,8 +33,17 @@ Manage OpenShift Container Platform with [oc command](https://github.com/Adrianh
     - Troubleshoot common container, pod, and cluster events and alerts
     - Use product documentation
 #
-=> 06 []()
+=> 06 
 
+Manage Authentication and Authorization with [oc command and web Ui](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Manage%20Authentication%20and%20Authorization.md)
+
+    - Configure the HTPasswd identity provider for authentication
+    - Create and delete users
+    - Modify user passwords
+    - Create and manage groups
+    - Modify user and group permissions
+
+#
 => 07 []()
 
 => 08 []()
