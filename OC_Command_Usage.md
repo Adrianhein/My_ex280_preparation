@@ -1,11 +1,13 @@
 
 
 =>Opsnshift administrator want to check for "oc" client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes cluster. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+    
     --------------------------------------------------------------------------------------------------
     | oc help                                                                                        |
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to identify for WEB console URL
+    
     --------------------------------------------------------------------------------------------------
     | oc get routes -n openshift-console                                                             |
     --------------------------------------------------------------------------------------------------
@@ -14,11 +16,13 @@
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for Administrative Commands Actions for administering an OpenShift cluster
+    
     --------------------------------------------------------------------------------------------------
     | oc adm --help                                                                                  |
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator to check the status of the namespace
+    
     --------------------------------------------------------------------------------------------------
     | oc status -h                                                                                   |
     --------------------------------------------------------------------------------------------------
@@ -30,22 +34,26 @@
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for all status of the namespaces
+    
     --------------------------------------------------------------------------------------------------
     | oc status -A                                                                                   |
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check information about the current session
+    
     --------------------------------------------------------------------------------------------------
     | oc whoami                                                                                      |
     --------------------------------------------------------------------------------------------------
 
 
 =>Opsnshift administrator want to create new project for task
+    
     --------------------------------------------------------------------------------------------------
     | oc new-project <project name>                                                                  |
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to create new application for deployment inside the specific project
+    
     --------------------------------------------------------------------------------------------------
     | oc new-app --name=<app name> --image=image_repositories -n <project name>                      |
     --------------------------------------------------------------------------------------------------
@@ -54,6 +62,7 @@
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for logs
+    
     --------------------------------------------------------------------------------------------------
     | oc logs                                                                                        |
     --------------------------------------------------------------------------------------------------
@@ -66,6 +75,7 @@ oc logs -h
 
 # bc=> build config
 =>Opsnshift administrator want to check for logs 
+    
     --------------------------------------------------------------------------------------------------
     | oc logs -f bc/<bc-name>                                                                        |
     --------------------------------------------------------------------------------------------------
@@ -98,6 +108,7 @@ oc logs -h
 
 
 =>Opsnshift administrator want to check for logs under "deployment"
+    
     --------------------------------------------------------------------------------------------------
     | oc get deployments -n <project name>                                                           |
     --------------------------------------------------------------------------------------------------
@@ -109,6 +120,7 @@ oc logs -h
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check for logs under "pod"
+    
     --------------------------------------------------------------------------------------------------
     | oc get pod -n <project name>                                                                   |
     --------------------------------------------------------------------------------------------------
@@ -194,6 +206,7 @@ oc adm top pods --namespaces=my-namespace
 oc adm top pods -l app=my-app-name
 
 =>Opsnshift administrator want to access for health checking inside OpenShift cluster
+    
     --------------------------------------------------------------------------------------------------
     |oc get nodes                                                                                    |
     |oc desctibe nodes                                                                               |
@@ -204,7 +217,9 @@ oc adm top pods -l app=my-app-name
     --------------------------------------------------------------------------------------------------
 
 =>Opsnshift administrator want to check the OPERATORS which is key component of the OpenShift clster that handle the lifecycle management of the various resources and services
+
 #As an Opsnshift administrator, regularly need to check these below status:
+    
     --------------------------------------------------------------------------------------------------
     |oc get clusteroperators                                                                         |
     |oc describe clusteroperators                                                                    |
