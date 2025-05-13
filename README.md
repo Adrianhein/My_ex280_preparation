@@ -44,7 +44,16 @@ Manage Authentication and Authorization with [oc command and web Ui](https://git
     - Modify user and group permissions
 
 #
-=> 07 []()
+=> 07 
+
+Enable Developer Self-Service with [oc command and web Ui](https://github.com/Adrianhein/My_ex280_preparation/blob/main/Enable%20Developer%20Self-Service.md)
+
+    - Configure cluster resource quotas
+    - Configure project quotas
+    - Configure project resource requirements
+    - Configure project limit ranges
+    - Configure project templates
+#
 
 => 08 []()
 
