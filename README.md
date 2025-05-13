@@ -15,7 +15,7 @@
 => 03 [Configure HAProxy](https://github.com/Adrianhein/My_ex280_preparation/blob/main/haproxy%20configuring)
 
 => 04 [OC command not found error](https://github.com/Adrianhein/My_ex280_preparation/blob/main/If%20oc%20command%20not%20found)
-
+#
 => 05 [OC command usage](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OC_Command_Usage.md)
 
 Manage OpenShift Container Platform
@@ -32,7 +32,7 @@ Manage OpenShift Container Platform
     Assess the health of an OpenShift cluster
     Troubleshoot common container, pod, and cluster events and alerts
     Use product documentation
-
+#
 => 06 []()
 
 => 07 []()
