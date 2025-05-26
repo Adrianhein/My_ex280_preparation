@@ -35,7 +35,7 @@ Deleting user from OpenShift steps:
     vim htpasswd_user_list.txt
 
     ##Update secret name from "openshift-config" project
-    oc create secret generic <secret name> --from-file=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+    oc create secret generic <secret name> --from-file=htpasswd=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
 
     #Identify and delete the users in the openshift cluster
     oc get users
@@ -55,7 +55,7 @@ Deleting user from OpenShift steps:
     oc get secret -n openshift-config
 
     3) Update secret name from "openshift-config" project
-    oc create secret generic <secret name> --from-file=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
+    oc create secret generic <secret name> --from-file=htpasswd=<htpasswd_user_list.txt> --dry-run=client -o yaml -n openshift-config | oc replace -f -
 
 
    =>  Create and manage groups
