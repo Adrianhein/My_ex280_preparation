@@ -1,7 +1,6 @@
 
-![RedHat OpenShift Administration](https://img.shields.io/badge/OpenShift-platform-red?logo=RedHatOpenShift&style=flat)
 ![](https://img.shields.io/badge/OpenShift-platform-red?logo=RedHatOpenShift&style=flat)
-![](https://img.shields.io/badge/EX280K-In%20Progress-yellow)
+![](https://img.shields.io/badge/EX280K-In%20Progress-red)
 
 # [EX280_preparation]
 
