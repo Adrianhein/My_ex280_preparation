@@ -1,9 +1,9 @@
----
 
 ![](https://img.shields.io/badge/OpenShift-platform-red?logo=RedHatOpenShift&style=flat)
 
 ![](https://img.shields.io/badge/RedHatOpenShiftAdministration-EX280K-red)
 
+---
 
 ![Red Hat Certified OpenShift Administrator exam: OVERVIEW](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=overview)
 
