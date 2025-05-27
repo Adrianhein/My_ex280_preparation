@@ -139,7 +139,7 @@ Possible Infra minimum setup requirement for fresh OpenShift Cluster
         |Jump Host     | 4 vCPUs | 4 GB RAM | 30 GB HD  |
         -------------------------------------------------
 
-#
+
 --------------------------------------------------------------------------------------------------
 Useful URLs      
 - [link 1](https://github.com/mgonzalezo/RedHat_ex280)
@@ -148,7 +148,7 @@ Useful URLs
 - [link 3.2](https://www.youtube.com/watch?v=V69I-M1AXs4&list=PLnFCwVWiQz4kuAEO3lgGiSkjJtEZSAEtd)
 - [link 4](https://github.com/christianh814/openshift-toolbox/tree/master)
 --------------------------------------------------------------------------------------------------
-#
+
 
 
 
