@@ -1,4 +1,4 @@
---
+---
 
 ![](https://img.shields.io/badge/OpenShift-platform-red?logo=RedHatOpenShift&style=flat)
 
