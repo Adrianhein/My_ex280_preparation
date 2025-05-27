@@ -66,8 +66,9 @@ Enable Developer Self-Service with [oc command and web Ui](https://github.com/Ad
 
 #
 
-
+# ----------------------------
 # Possible Infra minimum setup
+# ----------------------------
 
 Create 6 "blank" VMs (or use BareMetal) for OpenShift itself (don't install an OS on this just yet)
 
@@ -113,9 +114,7 @@ Create 1 VM for Git Server (can use Centos/Fedora/RHEL)
         8 GB RAM
         1000 GB HD
 
-====================================================================
 Possible Infra minimum setup requirement for fresh OpenShift Cluster
-====================================================================
 
         -------------------------------------------------
         |Master Node 01| 4 vCPUs | 16 GB RAM | 120 GB HD|
