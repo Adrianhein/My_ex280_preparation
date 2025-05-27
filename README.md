@@ -10,7 +10,7 @@
 
 [Red Hat Certified OpenShift Administrator exam: WHAT YOU NEED TO KNOW](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=what-you-need-to-know)
 
--
+---
 => 01 [OpenShift_Local_LabEnvironment](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift_Local_LabEnv_0.2.pdf)
 #
 => 02 [OpenShift Local installation on CentOS Stream 9](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift%20Local%20installation%20on%20CentOS%20Stream%209.pdf)
