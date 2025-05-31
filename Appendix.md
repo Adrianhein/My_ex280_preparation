@@ -47,7 +47,7 @@ Example:
 ---
 
 
-###Different between  openshift-etcd-operator and openshift-etcd
+Different between  openshift-etcd-operator and openshift-etcd
 
 
 🔹 openshift-etcd-operator
@@ -86,7 +86,7 @@ This operator is part of the Cluster Version Operator (CVO) system that ensures 
 
         The etcd service that other control plane components use
 
-###This namespace is where the running etcd servers (the distributed key-value store that underpins Kubernetes and OpenShift) reside.
+This namespace is where the running etcd servers (the distributed key-value store that underpins Kubernetes and OpenShift) reside.
 
     | ------------------------- | ------------------------ | ---------------------------------------------------- |
     | Namespace                 | Component                | Role                                                 |
@@ -130,7 +130,7 @@ This operator is part of the Cluster Version Operator (CVO) system that ensures 
 
 ---
 
-###enable disable monitoring
+enable disable monitoring
 
     https://github.com/Adrianhein/rhel-notes/blob/main/OpenShift%20crc%20monitoring%20enable-disable.md
 
