@@ -1,6 +1,6 @@
 
 ---
-#####################################################
+
 " self-provisioner " vs " self-provisioners " can be confusing, but here's the clear difference:
 
     | ------------------- | ----------- | ------------------------------------------------ |
@@ -22,7 +22,6 @@ self-provisioner (Cluster Role)
     oc adm policy remove-cluster-role-from-group self-provisioner self-provisioners
 
 ---
-#####################################################
 
 " deployment (Singular) " vs " deployments (Plural) "
 
@@ -47,7 +46,6 @@ Example:
 
 ---
 
-#####################################################
 
 ###Different between  openshift-etcd-operator and openshift-etcd
 
@@ -131,7 +129,6 @@ This operator is part of the Cluster Version Operator (CVO) system that ensures 
     [sysadm@openshift-local-01 ~]$ 
 
 ---
-#####################################################
 
 ###enable disable monitoring
 
@@ -139,7 +136,6 @@ This operator is part of the Cluster Version Operator (CVO) system that ensures 
 
 ---
 
-#####################################################
 
 
 
