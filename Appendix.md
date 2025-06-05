@@ -163,5 +163,15 @@ enable disable monitoring
 
 ---
 
+### Most recent created project on 
+
+    oc get projects --sort-by=.metadata.creationTimestamp | tail -n 2
+
+    OR
+    
+    oc get projects --sort-by=.metadata.creationTimestamp -o custom-columns="NAME:.metadata.name,CREATED:.metadata.creationTimestamp" | tail -n 2
 
 
+    oc get projects --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-5].metadata.name}{"\n"}'
+
+---
