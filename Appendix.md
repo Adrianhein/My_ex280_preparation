@@ -137,6 +137,10 @@ enable disable monitoring
 ---
 
 ### On OpenShift Server
+
+#### To verify api url on OpenShift server
+
+    oc whoami --show-server
 #### Generate crt file OpenShift Server Like "openshift-ca.crt" 
     echo | openssl s_client -showcerts -connect api.crc.testing:6443 </dev/null 2>/dev/null | openssl x509 -outform PEM > openshift-ca.crt
 
