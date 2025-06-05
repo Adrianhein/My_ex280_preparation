@@ -136,8 +136,28 @@ enable disable monitoring
 
 ---
 
+### On OpenShift Server
+#### Generate crt file OpenShift Server Like "openshift-ca.crt" 
+    echo | openssl s_client -showcerts -connect api.crc.testing:6443 </dev/null 2>/dev/null | openssl x509 -outform PEM > openshift-ca.crt
 
+#
 
+### On Client RHEL
+### Place "openshift-ca.crt" on Client Linux System
+
+    cd /etc/pki/ca-trust/source/anchors/openshift-ca.crt
+    update-ca-trust 
+
+### Then maping "IP of OpenShift and api.crc.testing" in '/etc/hosts' 
+    
+    192.168.122.10 api.crc.testing  #example
+
+### Try login
+
+    oc login https://api.crc.testing:6443 --username=<user> --password=<password>
+    oc status
+
+---
 
 
 
