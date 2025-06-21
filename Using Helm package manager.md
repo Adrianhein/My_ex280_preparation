@@ -8,7 +8,7 @@
     cp -p ~/linux-amd64/helm ~/local/bin/
     helm version
 
-### On Windows (chocolty need to be installed first)
+### On Windows (chocolaty need to be installed first)
     choco install kubernetes-helm
     helm version
 
