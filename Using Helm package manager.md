@@ -1,5 +1,5 @@
 
-# Helm is a package manager for Kubernetes, which helps in managing Kubernetes applications. 
+## Helm is a package manager of Kubernetes, which helps in managing Kubernetes applications. 
 ### To fix this error, we'll need to install Helm.
 ### On Linux
 ### Download the Helm binary:
