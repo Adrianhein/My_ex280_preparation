@@ -46,5 +46,5 @@ Types:
         - port: 80
           targetPort: 8090
           nodePort: 30000
-### the default port range for NodePort services is: 30000–32767
+##### The default port range for NodePort services is: 30000–32767
 
