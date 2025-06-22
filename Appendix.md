@@ -175,3 +175,9 @@ enable disable monitoring
     oc get projects --sort-by=.metadata.creationTimestamp -o jsonpath='{.items[-5].metadata.name}{"\n"}'
 
 ---
+
+### Port forwarding to quick verify
+
+    oc port-forward <app-name> 8080:8080
+
+---
