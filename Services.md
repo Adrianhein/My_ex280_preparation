@@ -30,6 +30,7 @@ Types:
           targetPort: 8090
         
 ##### To access this "my-service" , in "default" namespace. The pattern is :  " my-service.default.svc.cluster.local "
+##### <service_name>.<project_name>.svc.cluster.local
 
 
 ### NodePort example:
