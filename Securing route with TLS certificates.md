@@ -1,4 +1,5 @@
----
+
+
 ### Secure Traffic TLS
 #### Three main types of route:
 
@@ -23,8 +24,6 @@
   	- clients establish TLS connection to Re-encrypt route
 	- TLS configured on both route and application
 	- it uses different certificates for Client-To-Route and Route-To-Application communication
-
----
 
 #### Certificates components:
 	
