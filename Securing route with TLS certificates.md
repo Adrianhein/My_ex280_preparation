@@ -1,29 +1,34 @@
 ---
 ### Secure Traffic TLS
 #### Three main types of route:
-	- Edge route
+	
+ 	- Edge route
 	- Pass-through route
 	- Re-encrypt route
 
 
 #### (1) Edge route
-	- clients can communicate securely through the edge route using TLS
+	
+ 	- clients can communicate securely through the edge route using TLS
 	- certificates configured at edge route
 	- communication from edge route to application is insecure
 
 #### (2) Pass-through route
-	- Route passes through without any operations
+	
+ 	- Route passes through without any operations
 	- certificates are configured only on application
 
 #### (3) Re-encrypt route
-	- clients establish TLS connection to Re-encrypt route
+	
+ 	- clients establish TLS connection to Re-encrypt route
 	- TLS configured on both route and application
 	- it uses different certificates for Client-To-Route and Route-To-Application communication
 
 ---
 
 #### Certificates components:
-	- Private key : represent the service's identity.s
+	
+ 	- Private key : represent the service's identity.s
 	- Public key : Handed out to the client
 	- CA : 
 
