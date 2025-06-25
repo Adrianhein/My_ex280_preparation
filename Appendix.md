@@ -181,3 +181,23 @@ enable disable monitoring
     oc port-forward <app-name> 8080:8080
 
 ---
+
+#
+
+---
+
+### HPA
+### RS
+### SA
+### SCC
+### RBAC
+
+
+
+
+
+
+
+
+
+
