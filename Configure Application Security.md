@@ -182,13 +182,14 @@
 
 
 ### Demo:
-#### oc new-project a-privileged-demo #### oc new-app bitnami/apache
-#### oc get all
-#### oc expose svc/apache
-#### oc get svc
-#### oc get svc -o wide
-#### oc get route
-#### oc delete project a-privileged-demo
+    # oc new-project a-privileged-demo
+    # oc new-app bitnami/apache
+    # oc get all
+    # oc expose svc/apache
+    # oc get svc
+    # oc get svc -o wide
+    # oc get route
+    # oc delete project a-privileged-demo
 
 
         [admin@openshift-local ~]$ oc new-project a-privileged-demo
