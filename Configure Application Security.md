@@ -153,6 +153,110 @@
     restricted-v2                     false   ["NET_BIND_SERVICE"]   MustRunAs   MustRunAsRange     MustRunAs   RunAsAny    <no value>   false            ["configMap","csi","downwardAPI","emptyDir","ephemeral","persistentVolumeClaim","projected","secret"]
     [admin@openshift-local ~]$ 
     
-    
+---
+#
+
+---
+
+## Privileged Tips for application running
+
+	- OpnenShift denies running containers as ROOT by default
+	- Restricted SCC used by default for PODs
+	- SA or Group determines POD's SCC
+
+### Security Risk Running as ROOT 
+	- Higher privileges pose security risks
+	- containers running as 'root' common in community images
+	- Malicious code could escalate host node permissions
+
+### Metigate Security Risk running as non-ROOT containers
+	- Bitnami, RedHat, Google, VMWare offer non-ROOT containers
+	- Non-ROOT containers run with non-root user for adding security
+	- Tailored for specific purposes (e.g Nginx server)
+	- Principle of least privilege limits security breach impact
+
+### Port binding comparism between Non-ROOT and ROOT containers
+	- Non-ROOT containers bind port numbers range is greater than '1024' by default
+	- Privileged ports below '1024' requires ROOT privileges
+	- OpenShift intelligently handles port binding for non-ROOT containers, that external routes use default port as 80 while internal services access with Openshift requires using specific higher ports
+
+
+### Demo
+oc new-project a-privileged-demo
+oc new-app bitnami/apache
+oc get all
+oc expose svc/apache
+oc get svc
+oc get svc -o wide
+oc get route
+oc delete project a-privileged-demo
+
+
+        [admin@openshift-local ~]$ oc new-project a-privileged-demo
+        Now using project "a-privileged-demo" on server "https://api.crc.testing:6443".
+        
+        You can add applications to this project with the 'new-app' command. For example, try:
+        
+            oc new-app rails-postgresql-example
+        
+        to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+        
+            kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.43 -- /agnhost serve-hostname
+        
+        [admin@openshift-local ~]$ oc new-app bitnami/apache
+        --> Found container image 8ff97bd (3 weeks old) from Docker Hub for "bitnami/apache"
+        
+            * An image stream tag will be created as "apache:latest" that will track this image
+        
+        --> Creating resources ...
+            imagestream.image.openshift.io "apache" created
+            deployment.apps "apache" created
+            service "apache" created
+        --> Success
+            Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+             'oc expose service/apache' 
+            Run 'oc status' to view your app.
+        [admin@openshift-local ~]$ oc get all
+        Warning: apps.openshift.io/v1 DeploymentConfig is deprecated in v4.14+, unavailable in v4.10000+
+        NAME                         READY   STATUS              RESTARTS   AGE
+        pod/apache-86c8c877d-pk244   0/1     ContainerCreating   0          5s
+        
+        NAME             TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)             AGE
+        service/apache   ClusterIP   10.217.5.41   <none>        8080/TCP,8443/TCP   8s
+        
+        NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+        deployment.apps/apache   0/1     1            0           8s
+        
+        NAME                                DESIRED   CURRENT   READY   AGE
+        replicaset.apps/apache-85744c8677   1         0         0       8s
+        replicaset.apps/apache-86c8c877d    1         1         0       5s
+        
+        NAME                                    IMAGE REPOSITORY                                                                   TAGS     UPDATED
+        imagestream.image.openshift.io/apache   default-route-openshift-image-registry.apps-crc.testing/a-privileged-demo/apache   latest   5 seconds ago
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc expose svc/apache
+        route.route.openshift.io/apache exposed
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc get svc
+        NAME     TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)             AGE
+        apache   ClusterIP   10.217.5.41   <none>        8080/TCP,8443/TCP   24s
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc get svc -o wide
+        NAME     TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)             AGE   SELECTOR
+        apache   ClusterIP   10.217.5.41   <none>        8080/TCP,8443/TCP   29s   deployment=apache
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc get route
+        NAME     HOST/PORT                                   PATH   SERVICES   PORT       TERMINATION   WILDCARD
+        apache   apache-a-privileged-demo.apps-crc.testing          apache     8080-tcp                 None
+        [admin@openshift-local ~]$
+	[admin@openshift-local ~]$ oc delete project a-privileged-demo
+	project.project.openshift.io "a-privileged-demo" deleted
+	[admin@openshift-local ~]$ 
+
+
+
+
+
 
 
