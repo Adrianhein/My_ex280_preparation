@@ -196,7 +196,8 @@ enable disable monitoring
 ### PVC   - Persisten Volume Claim
 ### SV    - Service
 ### CM    - Config Map
-
+### CRDs  - Custom Resource Definition
+### OLM   - Operator Lifecycle Manager
 
 
 
