@@ -199,7 +199,7 @@ enable disable monitoring
 ### CRDs  - Custom Resource Definition
 ### OLM   - Operator Lifecycle Manager
 ### CSV   - Cluster Service Version
-### OVNK  - OVN-Kubernetes { default SDN plugi }
+### OVNK  - OVN-Kubernetes { default SDN plugin }
 
 
 
