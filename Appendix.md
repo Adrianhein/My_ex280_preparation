@@ -192,6 +192,8 @@ enable disable monitoring
 ### SA    - Service Account
 ### SCC   - Security Context Constraints
 ### RBAC  - Roll Based Access Control
+### PV    - Persisten Volume 
+### PVC   - Persisten Volume Claim
 
 
 
