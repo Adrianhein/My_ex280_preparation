@@ -181,7 +181,7 @@
 	- OpenShift intelligently handles port binding for non-ROOT containers, that external routes use default port as 80 while internal services access with Openshift requires using specific higher ports
 
 
-### Demo:
+### Demo Step:
     # oc new-project a-privileged-demo
     # oc new-app bitnami/apache
     # oc get all
@@ -190,8 +190,8 @@
     # oc get svc -o wide
     # oc get route
     # oc delete project a-privileged-demo
-
-
+---
+### Demo Step Output:
         [admin@openshift-local ~]$ oc new-project a-privileged-demo
         Now using project "a-privileged-demo" on server "https://api.crc.testing:6443".
         
@@ -251,7 +251,8 @@
         apache   apache-a-privileged-demo.apps-crc.testing          apache     8080-tcp                 None
         [admin@openshift-local ~]$oc delete project a-privileged-demo
 	    project.project.openshift.io "a-privileged-demo" deleted
-	
+
+---
 
 
 
