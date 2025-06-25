@@ -182,14 +182,14 @@
 
 
 ### Demo
-oc new-project a-privileged-demo
-oc new-app bitnami/apache
-oc get all
-oc expose svc/apache
-oc get svc
-oc get svc -o wide
-oc get route
-oc delete project a-privileged-demo
+#### oc new-project a-privileged-demo
+#### oc new-app bitnami/apache
+#### oc get all
+#### oc expose svc/apache
+#### oc get svc
+#### oc get svc -o wide
+#### oc get route
+#### oc delete project a-privileged-demo
 
 
         [admin@openshift-local ~]$ oc new-project a-privileged-demo
@@ -249,11 +249,9 @@ oc delete project a-privileged-demo
         [admin@openshift-local ~]$ oc get route
         NAME     HOST/PORT                                   PATH   SERVICES   PORT       TERMINATION   WILDCARD
         apache   apache-a-privileged-demo.apps-crc.testing          apache     8080-tcp                 None
-        [admin@openshift-local ~]$
-	[admin@openshift-local ~]$ oc delete project a-privileged-demo
+        [admin@openshift-local ~]$oc delete project a-privileged-demo
 	project.project.openshift.io "a-privileged-demo" deleted
-	[admin@openshift-local ~]$ 
-
+	
 
 
 
