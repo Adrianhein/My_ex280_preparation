@@ -186,11 +186,13 @@ enable disable monitoring
 
 ---
 
-### HPA
-### RS
-### SA
-### SCC
-### RBAC
+### OC    - OpenShift CLI (Command Line Interface) 
+### HPA   - Horizaontal Pod Autoscaling
+### RS    - Replica Set
+### SA    - Service Account
+### SCC   - Security Context Constraints
+### RBAC  - Roll Based Access Control
+
 
 
 
