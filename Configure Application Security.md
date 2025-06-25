@@ -362,11 +362,11 @@
         [admin@openshift-local ~]$ oc adm policy add-role-to-user view system:serviceaccount:a-demo:my-sa -n a-demo-api 
         clusterrole.rbac.authorization.k8s.io/view added: "system:serviceaccount:a-demo:my-sa"
         [admin@openshift-local ~]$
-	[admin@openshift-local ~]$ oc delete project  a-demo-api
-	project.project.openshift.io "a-demo-api" deleted
-	[admin@openshift-local ~]$ oc delete project  a-demo
-	project.project.openshift.io "a-demo" deleted
-	[admin@openshift-local ~]$ 
+	    [admin@openshift-local ~]$ oc delete project  a-demo-api
+	    project.project.openshift.io "a-demo-api" deleted
+	    [admin@openshift-local ~]$ oc delete project  a-demo
+	    project.project.openshift.io "a-demo" deleted
+	    [admin@openshift-local ~]$ 
 
 ---
 
