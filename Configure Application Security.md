@@ -250,7 +250,7 @@
         NAME     HOST/PORT                                   PATH   SERVICES   PORT       TERMINATION   WILDCARD
         apache   apache-a-privileged-demo.apps-crc.testing          apache     8080-tcp                 None
         [admin@openshift-local ~]$oc delete project a-privileged-demo
-	project.project.openshift.io "a-privileged-demo" deleted
+	    project.project.openshift.io "a-privileged-demo" deleted
 	
 
 
