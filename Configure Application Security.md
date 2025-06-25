@@ -259,9 +259,9 @@
 ## Configuring applications access to Kubenete APIs
 
 ### =+=> Concepts:
-	- service accounts
-	- scc [security context constraint]
-	- RBAC 
+	- SA   [service accounts]
+	- SCC  [security context constraint]
+	- RBAC [role based access control]
 ### =+=>Best Practices for SA tips:
 	* identity for apps within specific project pods
 	* applications communicate and autheticate with SA to interact with API server
