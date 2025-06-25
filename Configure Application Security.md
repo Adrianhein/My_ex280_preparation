@@ -181,9 +181,8 @@
 	- OpenShift intelligently handles port binding for non-ROOT containers, that external routes use default port as 80 while internal services access with Openshift requires using specific higher ports
 
 
-### Demo
-#### oc new-project a-privileged-demo
-#### oc new-app bitnami/apache
+### Demo:
+#### oc new-project a-privileged-demo #### oc new-app bitnami/apache
 #### oc get all
 #### oc expose svc/apache
 #### oc get svc
