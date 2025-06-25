@@ -294,6 +294,79 @@
 
 	(3) assign service account to PODs
 
+### DEMO
+### Create a project "a-demo"
+	oc new-project a-demo
+### Create service account SA
+	oc create sa my-demo-sa
+### Create a new demo app
+	oc new-app --name=my-demo-app --image=bitnami/apache
+### Assign service account to app
+	oc set sa deployment my-demo-app my-demo-sa
+### Create a project "a-demo-api"
+	oc new-project a-demo-api
+### Assign policy view role for SA to "a-demo-api"
+	oc adm policy add-role-to-user view system:serviceaccount:a-demo:my-demo-sa -n a-demo-api 
+### Deleting all demo projects
+	oc delete project  a-demo
+ 	oc delete project  a-demo-api
+#
+
+        [admin@openshift-local ~]$ oc new-project a-demo
+        Now using project "a-demo" on server "https://api.crc.testing:6443".
+        
+        You can add applications to this project with the 'new-app' command. For example, try:
+        
+            oc new-app rails-postgresql-example
+        
+        to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+        
+            kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.43 -- /agnhost serve-hostname
+        
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc create sa my-sa
+        serviceaccount/my-sa created
+        [admin@openshift-local ~]$ oc new-app --name=my-app --image=bitnami/apache
+        --> Found container image 8ff97bd (3 weeks old) from Docker Hub for "bitnami/apache"
+        
+            * An image stream tag will be created as "my-app:latest" that will track this image
+        
+        --> Creating resources ...
+            imagestream.image.openshift.io "my-app" created
+            deployment.apps "my-app" created
+            service "my-app" created
+        --> Success
+            Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+             'oc expose service/my-app' 
+            Run 'oc status' to view your app.
+        [admin@openshift-local ~]$ oc set sa deployment my-app my-sa
+        deployment.apps/my-app serviceaccount updated
+        [admin@openshift-local ~]$ oc get sa
+        NAME       SECRETS   AGE
+        builder    1         23m
+        default    1         23m
+        deployer   1         23m
+        my-sa      1         114s
+        [admin@openshift-local ~]$ 
+        [admin@openshift-local ~]$ oc new-project a-demo-api
+        Now using project "a-demo-api" on server "https://api.crc.testing:6443".
+        
+        You can add applications to this project with the 'new-app' command. For example, try:
+        
+            oc new-app rails-postgresql-example
+        
+        to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+        
+            kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.43 -- /agnhost serve-hostname
+        
+        [admin@openshift-local ~]$ oc adm policy add-role-to-user view system:serviceaccount:a-demo:my-sa -n a-demo-api 
+        clusterrole.rbac.authorization.k8s.io/view added: "system:serviceaccount:a-demo:my-sa"
+        [admin@openshift-local ~]$
+	[admin@openshift-local ~]$ oc delete project  a-demo-api
+	project.project.openshift.io "a-demo-api" deleted
+	[admin@openshift-local ~]$ oc delete project  a-demo
+	project.project.openshift.io "a-demo" deleted
+	[admin@openshift-local ~]$ 
 
 ---
 
