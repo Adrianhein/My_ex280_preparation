@@ -253,6 +253,49 @@
 	    project.project.openshift.io "a-privileged-demo" deleted
 
 ---
+#
+---
+
+## Configuring applications access to Kubenete APIs
+
+### =+=> Concepts:
+	- service accounts
+	- scc [security context constraint]
+	- RBAC 
+### =+=>Best Practices for SA tips:
+	* identity for apps within specific project pods
+	* applications communicate and autheticate with SA to interact with API server
+	* create a dedicated SA for applications needing additional authorizations
+### =+=>Best Practices for RBAC:
+	* avoid granting additonale permissions to default service account
+	* specified newly created SA with tailored permissions for application pods
+
+### When configure application API Access:
+	* Regular pods can use default SA
+	* But some infrastructure workloads such as operators or application monitor can need API access
+	* Determine to configure the scopes of resources:
+
+		- access is within same namespace ? Then must create
+		  'role' OR 'cluster role' and 'serviceaccount' 
+
+		- access is in different namespaces ? Then must create
+		  'role binding' in the resource's project
+
+		- access is in across all namespaces ? Then must setup
+		  'cluster role binding' for 'serviceaccount'
+
+	
+	Steps - application authorization:
+	(1) create service account
+
+
+	(2) grant API access
+
+
+	(3) assign service account to PODs
+
+
+---
 
 
 
