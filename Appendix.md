@@ -198,7 +198,8 @@ enable disable monitoring
 ### CM    - Config Map
 ### CRDs  - Custom Resource Definition
 ### OLM   - Operator Lifecycle Manager
-
+### CSV   - Cluster Service Version
+### OVNK  - OVN-Kubernetes { default SDN plugi }
 
 
 
