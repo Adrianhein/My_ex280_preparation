@@ -129,7 +129,8 @@
     
     
     
-   ### OR you can set like this below instead of using PATCH command: oc patch deployment/httpd  --patch '{"spec":{"template":{"spec":{"serviceAccountName":"my-demo-sa"}}}}'
+   ### OR you can set like this below 'set' command instead of using PATCH command: 
+   ##### oc patch deployment/httpd  --patch '{"spec":{"template":{"spec":{"serviceAccountName":"my-demo-sa"}}}}'
     
     oc set sa deployment/httpd my-demo-sa
     
