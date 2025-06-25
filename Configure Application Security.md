@@ -38,7 +38,7 @@
 
 ---
 
-### SCC - security context constraints
+## SCC - security context constraints
 
 - controlling pod permission within OpenShif 
 - determin pod actions and resources access
