@@ -149,7 +149,7 @@ enable disable monitoring
 ### On Client RHEL
 ### Place "openshift-ca.crt" on Client Linux System
 
-    cd /etc/pki/ca-trust/source/anchors/openshift-ca.crt
+    cat /etc/pki/ca-trust/source/anchors/openshift-ca.crt
     update-ca-trust 
 
 ### Then maping "IP of OpenShift and api.crc.testing" in '/etc/hosts' 
