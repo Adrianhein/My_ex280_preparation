@@ -194,7 +194,8 @@ enable disable monitoring
 ### RBAC  - Roll Based Access Control
 ### PV    - Persisten Volume 
 ### PVC   - Persisten Volume Claim
-
+### SV    - Service
+### CM    - Config Map
 
 
 
