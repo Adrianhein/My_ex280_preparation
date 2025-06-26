@@ -202,9 +202,34 @@ enable disable monitoring
 ### OVNK  - OVN-Kubernetes { default SDN plugin }
 
 
+---
+
+---
+
+## The maximum number of pods that can be deployed in OpenShift 4.x.
+
+    | ---------------------- | ------------------------------------------- |
+    | Component              | Maximum Supported                           |
+    | ---------------------- | ------------------------------------------- |
+    | Pods per Node          |  250   (default), up to **500** with tuning |
+    | Pods per Cluster       |  150,000                                    |
+    | Nodes per Cluster      |  2,000                                      |
+    | Namespaces per Cluster |  10,000+                                    |
+    | Services per Namespace |  5,000                                      |
+    | ---------------------- | ------------------------------------------- |
+
+- These limits assume the use of Red Hat Enterprise Linux CoreOS (RHCOS) with adequate hardware resources and OpenShift's default configuration.
+- Refers to latest Red Hat OpenShift documentation 
 
 
-
-
+## The maximum number of containers in a single pod in Kubernetes (and OpenShift) is not strictly limited by a hard-coded value
+    | -------------------------------------- | ------------------------------------------------------ |
+    | Constraint Type                        | Limit                                                  |
+    | -------------------------------------- | ------------------------------------------------------ |
+    | **Recommended Max Containers per Pod** |    ~10 to 20 containers                                |
+    | **Hard Upper Bound (theoretical)**     |    ~100+ containers, depending on system performance   |
+    | -------------------------------------- | ------------------------------------------------------ |
+### Best Practice:
+    Stick to ≤10 containers per pod unless you have a specific architectural reason to increase it — and always test carefully under load.
 
 
