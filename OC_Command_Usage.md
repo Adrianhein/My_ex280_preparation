@@ -234,6 +234,12 @@
     --------------------------------------------------------------------------------------------------
 
 
+### To remove "kubeadmin" user
+    oc describe secret  -n kube-system kubeadmin   
+    oc delete user kubeadmin
+    oc delete secret kubeadmin -n kube-system      ##<< ## affectiverly disable the user
+    oc delete clusterrolebinding kubeadmin
+
 
 
 
