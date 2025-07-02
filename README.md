@@ -14,13 +14,13 @@
 ---
 ## => 01 [OpenShift_Local_LabEnvironment](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift_Local_LabEnv_0.2.pdf)
 #
-## => 02 [OpenShift Local installation on CentOS Stream 9](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift%20Local%20installation%20on%20CentOS%20Stream%209.pdf)
+#### => 02 [OpenShift Local installation on CentOS Stream 9](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OpenShift%20Local%20installation%20on%20CentOS%20Stream%209.pdf)
 #
-## => 03 [Configure HAProxy](https://github.com/Adrianhein/My_ex280_preparation/blob/main/haproxy%20configuring)
+#### => 03 [Configure HAProxy](https://github.com/Adrianhein/My_ex280_preparation/blob/main/haproxy%20configuring)
 #
 ## => 04 [OC command not found error](https://github.com/Adrianhein/My_ex280_preparation/blob/main/If%20oc%20command%20not%20found)
 #
-## => 05 
+#### => 05 
 
 ## Manage OpenShift Container Platform with [oc command](https://github.com/Adrianhein/My_ex280_preparation/blob/main/OC_Command_Usage.md)
 
