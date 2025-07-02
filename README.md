@@ -61,14 +61,39 @@ Enable Developer Self-Service with [oc command and web Ui](https://github.com/Ad
 
 => 08 []()
 
+Configure Network Security
+
+    Configure networking components
+    Troubleshoot software defined networking
+    Create and edit external routes
+    Control cluster network ingress
+    Secure external and internal traffic using TLS certificates
+    Configure application network policies
+#
+
 => 09 []()
+
+Manage OpenShift Operators
+
+    Install an operator
+    Delete an operator
+
+#
 
 => 10 []()
 
+Configure Application Security
 
+    Configure and manage service accounts
+    Run privileged applications
+    Create service accounts
+    Manage and apply permissions using security context constraints
+    Create and apply secrets to manage sensitive information
+    Configure application access to Kubernetes APIs
+    Configure Kubernetes CronJobs
 
+---
 
---------------------------------------------------------------------------------------------------------------------------------------------
 #  Possible Infra minimum Setup
 
 Create 6 "blank" VMs (or use BareMetal) for OpenShift itself (don't install an OS on this just yet)
