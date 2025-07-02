@@ -5,7 +5,7 @@
 
 ---
 
-#### ![Red Hat Certified OpenShift Administrator exam: OVERVIEW](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=overview)
+#### [Red Hat Certified OpenShift Administrator exam: OVERVIEW](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=overview)
 
 #### [Red Hat Certified OpenShift Administrator exam: OBJECTIVE](https://www.redhat.com/en/services/training/red-hat-certified-openshift-administrator-exam?section=objectives)
 
